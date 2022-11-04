@@ -6,11 +6,11 @@
 /*   By: ccosta-c <ccosta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 14:26:13 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/03 14:50:54 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/03 15:33:00 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t  strlen(const char *s)
+size_t  ft_strlen(const char *s)
 {
     int i;
 
