@@ -6,18 +6,18 @@
 /*   By: ccosta-c <ccosta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 11:14:00 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/03 12:46:54 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/04 11:42:13 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
-    {
-        return (1);
-    }
-    else
-    {
-        return (0);
-    }           
+	if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

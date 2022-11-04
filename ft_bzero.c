@@ -6,18 +6,18 @@
 /*   By: ccosta-c <ccosta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 10:59:34 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/04 11:33:54 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/04 11:38:39 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (n >= i)
-    {
-        s[i] = 0;
-        i++;
-    }
+	i = 0;
+	while (n >= i)
+	{
+		s[i] = 0;
+		i++;
+	}
 }

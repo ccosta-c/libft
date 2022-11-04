@@ -6,18 +6,18 @@
 /*   By: ccosta-c <ccosta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 13:46:47 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/03 13:52:21 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/04 11:42:51 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if (c >= 0 && c <= 127)
-    {
-        return (1);
-    }
-    else
-    {
-        return (0);
-    }
+	if (c >= 0 && c <= 127)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
