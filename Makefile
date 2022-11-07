@@ -6,7 +6,7 @@
 #    By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 13:40:24 by ccosta-c          #+#    #+#              #
-#    Updated: 2022/11/07 17:45:05 by ccosta-c         ###   ########.fr        #
+#    Updated: 2022/11/07 17:49:51 by ccosta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,8 @@ SRC = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 FLAGS = -Wall -Wextra -Werror
 
 COMPILER = cc
+
+OBJS := $(SRC:.c=.o)
 
 all: $(NAME)
 
@@ -31,3 +33,18 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+## stuff for the tester
+
+file:
+	cc -Wall -Wextra -Werror -c ${SRC} main.c
+
+ofile:
+	cc -Wall -Wextra -Werror -o a.out ${OBJS} main.o
+
+so:
+	cc -nostartfiles -Wall -Wextra -Werror -fPIC $(SRC)
+	cc -nostartfiles -shared -o libft.so $(OBJS)
+	ar -cr libft.a *.o
+
+## make cfile >> make ofile >> make so

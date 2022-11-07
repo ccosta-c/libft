@@ -6,12 +6,12 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 15:07:09 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/07 15:40:32 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/07 17:47:18 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT
-#define LIBFT
+#ifndef LIBFT.H
+#define LIBFT.H
 
 #include <stdio.h>
 
