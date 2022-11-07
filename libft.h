@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccosta-c <ccosta-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 15:07:09 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/04 15:23:52 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/07 11:53:13 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef libft.h
-#define libft.h
+#ifndef LIBFT
+#define LIBFT
 
 #include <stdio.h>
 

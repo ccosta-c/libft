@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccosta-c <ccosta-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 13:07:21 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/04 15:27:47 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/07 11:53:13 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

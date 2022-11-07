@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ccosta-c <ccosta-c@student.42.fr>          +#+  +:+       +#+         #
+#    By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 13:40:24 by ccosta-c          #+#    #+#              #
-#    Updated: 2022/11/04 15:28:17 by ccosta-c         ###   ########.fr        #
+#    Updated: 2022/11/07 11:53:13 by ccosta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRC = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 all: $(NAME)
 
 $(NAME):
-	cc -o -Wall -Wextra -Werror $(NAME) $(SRC)
+	cc -o  $(NAME) $(SRC)
 
 clean:
 	rm -f *.o
