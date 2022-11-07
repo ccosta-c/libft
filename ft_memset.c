@@ -6,11 +6,15 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 14:55:20 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/07 13:49:09 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/07 17:46:23 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+//The  memset()  function  fills  the  first  n  bytes of the memory area
+//	pointed to by s with the constant byte c.
+
 
 void	*ft_memset(void *s, int c, size_t n)
 {
