@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/08 11:21:34 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/08 13:06:59 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,14 @@ char	alphanumeric = 'x';
 char	ascii = '.';
 char	print = '!';
 char	stringlength[] = "1234567890";
+//-------------------------------------
 char	textmemset[] = "TESTESTESTEST";
 char	symbolmemset = '*';
-char	textbzero[] = "HOPETHISWORKS";
+//-------------------------------------
+char	textbzero[] = "";
+//-------------------------------------
+char	memcpysrc[] = "Hello";
+char	memcpydest[] = "Why would";
 
 //isalpha
 printf("%s\n%s%c\n", "------------------------------", "isalpha - ", alphabetic);
@@ -58,18 +63,22 @@ printf("%s%s\n", "System Version - ", ((char*)memset(&textmemset, symbolmemset, 
 printf("%s\n%s%s\n", "------------------------------", "bzero - ", textbzero);
 printf("%s", "My Version     - ");
 int	i = 0;
-ft_bzero(textbzero, 4);
-while (i < 14)
+ft_bzero(textbzero, 1);
+while (i < 0)
 {
 	printf("%d ", textbzero[i]);
 	i++;
 }
-printf("\n%s", "System Version - ");
+printf("\n%s\n", "System Version - ");
 i = 0;
-bzero(textbzero, 4);
-while (i < 14)
+bzero(textbzero, 1);
+while (i < 0)
 {
 	printf("%d ", textbzero[i]);
 	i++;
 }
+//memcpy
+printf("%s\n%s%s / %s\n", "------------------------------", "memcpy - ", memcpysrc, memcpydest);
+printf("%s%s\n", "My Version - ", ((char*)ft_memcpy(&memcpydest, &memcpysrc, 6)));
+printf("%s%s\n", "System Version - ", ((char*)memcpy(&memcpydest, &memcpysrc, 6)));
 }
