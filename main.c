@@ -6,86 +6,100 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/08 15:29:42 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/08 17:28:02 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <ctype.h>
-#include <string.h>
+#include <bsd/string.h>
+#include <stdio.h>
 
 int main (void)
 {
 char	alphabetic = 'c';
 char	digit = '4';
-char	alphanumeric = 'x';
+char	alphanumeric = '!';
 char	ascii = '.';
 char	print = '!';
 char	stringlength[] = "1234567890";
 //-------------------------------------
 char	textmemset[] = "TESTESTESTEST";
 char	symbolmemset = '*';
+int	sizememset = 5;
 //-------------------------------------
-char	textbzero[] = "";
+char	textbzero[] = "testbitch";
+int	sizebzero = 5;
+int	sizestring = 10;
 //-------------------------------------
 char	memcpysrc[] = "Hello";
 char	memcpydest[] = "Why would";
+int	sizememcpy = 6;
 //-------------------------------------
 char	memmovesrc[] = "111111111111111111111";
 char	memmovedest[] = "This is a long phrase";
+int	sizememmove = 10;
+//-------------------------------------
+char	strlcpysrc[] = "11111111111111111111";
+char	strlcpydest[] = "This is a long phrase";
+int	sizestrlcpy = 15;
 
 //isalpha
-printf("%s\n%s%c\n", "------------------------------", "isalpha - ", alphabetic);
-printf("%s%d\n", "My Version - ", ft_isalpha(alphabetic));
-printf("%s%d\n", "System Version - ", isalpha(alphabetic));
+printf("------------------------------\nisalpha - \"%c\"\n", alphabetic);
+printf("My Version - %d\n", ft_isalpha(alphabetic));
+printf("System Version - %d\n", isalpha(alphabetic));
 //isdigit
-printf("%s\n%s%c\n", "------------------------------", "isdigit - ", digit);
-printf("%s%d\n", "My Version - ", ft_isdigit(digit));
-printf("%s%d\n", "System Version - ", isdigit(digit));
+printf("------------------------------\nisdigit - \"%d\"\n", digit);
+printf("My Version - %d\n", ft_isdigit(digit));
+printf("System Version - %d\n", isdigit(digit));
 //isalnum
-printf("%s\n%s%c\n", "------------------------------", "isalnum - ", alphanumeric);
-printf("%s%d\n", "My Version - ", ft_isalnum(alphanumeric));
-printf("%s%d\n", "System Version - ", isalnum(alphanumeric));
+printf("------------------------------\nisalnum - \"%c\"\n", alphanumeric);
+printf("My Version - %d\n", ft_isalnum(alphanumeric));
+printf("System Version - %d\n", isalnum(alphanumeric));
 //isascii
-printf("%s\n%s%c\n", "------------------------------", "isascii - ", ascii);
-printf("%s%d\n", "My Version - ", ft_isascii(ascii));
-printf("%s%d\n", "System Version - ", isascii(ascii));
+printf("------------------------------\nisascii - \"%c\"\n", ascii);
+printf("My Version - %d\n", ft_isascii(ascii));
+printf("System Version - %d\n", isascii(ascii));
 //isprint
-printf("%s\n%s%c\n", "------------------------------", "isprint - ", print);
-printf("%s%d\n", "My Version - ", ft_isprint(print));
-printf("%s%d\n", "System Version - ", isprint(print));
+printf("------------------------------\nisprint - \"%c\"\n", print);
+printf("My Version - %d\n", ft_isprint(print));
+printf("System Version - %d\n", isprint(print));
 //strlen
-printf("%s\n%s%s\n", "------------------------------", "strlen - ", stringlength);
-printf("%s%lu\n", "My Version - ", ft_strlen(stringlength));
-printf("%s%lu\n", "System Version - ", strlen(stringlength));
+printf("------------------------------\nstrlen - \"%s\"\n", stringlength);
+printf("My Version - %lu\n", ft_strlen(stringlength));
+printf("System Version - %lu\n", strlen(stringlength));
 //memset
-printf("%s\n%s%s\n", "------------------------------", "memset - ", textmemset);
-printf("%s%s\n", "My Version - ", ((char*)ft_memset(&textmemset, symbolmemset, 4)));
-printf("%s%s\n", "System Version - ", ((char*)memset(&textmemset, symbolmemset, 4)));
+printf("------------------------------\nmemset - STRING \"%s\" AND SIZE \"%d\"\n", textmemset, sizememset);
+printf("My Version - %s\n", ((char*)ft_memset(&textmemset, symbolmemset, sizememset)));
+printf("System Version - %s\n", ((char*)memset(&textmemset, symbolmemset, sizememset)));
 //bzero
-printf("%s\n%s%s\n", "------------------------------", "bzero - ", textbzero);
-printf("%s", "My Version     - ");
+printf("------------------------------\nbzero - STRING \"%s\" AND SIZE \"%d\"\n", textbzero, sizebzero);
+printf("My Version     - ");
 int	i = 0;
-ft_bzero(textbzero, 1);
-while (i < 0)
+ft_bzero(textbzero, sizebzero);
+while (i < sizestring)
 {
 	printf("%d ", textbzero[i]);
 	i++;
 }
-printf("\n%s\n", "System Version - ");
+printf("\nSystem Version - ");
 i = 0;
-bzero(textbzero, 1);
-while (i < 0)
+bzero(textbzero, sizebzero);
+while (i < sizestring)
 {
 	printf("%d ", textbzero[i]);
 	i++;
 }
 //memcpy
-printf("%s\n%s%s / %s\n", "------------------------------", "memcpy - ", memcpydest, memcpysrc);
-printf("%s%s\n", "My Version - ", ((char*)ft_memcpy(&memcpydest, &memcpysrc, 6)));
-printf("%s%s\n", "System Version - ", ((char*)memcpy(&memcpydest, &memcpysrc, 6)));
+printf("\n------------------------------\nmemcpy - DESTINATION \"%s\" SOURCE \"%s\" AND SIZE \"%d\"\n", memcpydest, memcpysrc, sizememcpy);
+printf("My Version - %s\n", ((char*)ft_memcpy(&memcpydest, &memcpysrc, sizememcpy)));
+printf("System Version - %s\n", ((char*)memcpy(&memcpydest, &memcpysrc, sizememcpy)));
 //memmove
-printf("%s\n%s%s / %s\n", "------------------------------", "memmove - ", memmovedest, memmovesrc);
-printf("%s%s\n", "My Version - ", ((char*)ft_memmove(&memmovedest, &memmovesrc, 23)));
-printf("%s%s\n", "System Version - ", ((char*)memmove(&memmovedest, &memmovesrc, 23)));
+printf("------------------------------\nmemmove - DESTINATION \"%s\" SOURCE \"%s\" AND SIZE \"%d\"\n", memmovedest, memmovesrc, sizememmove);
+printf("%s%s\n", "My Version - ", ((char*)ft_memmove(&memmovedest, &memmovesrc, sizememmove)));
+printf("%s%s\n", "System Version - ", ((char*)memmove(&memmovedest, &memmovesrc, sizememmove)));
+//strlcpy
+printf("------------------------------\nstrlcpy - DESTINATION \"%s\" SOURCE \"%s\" AND SIZE \"%d\"\n", strlcpydest, strlcpysrc, sizestrlcpy);
+printf("My Version - \n");
+printf("System Version - %lu\n", (strlcpy(strlcpydest, strlcpysrc, sizestrlcpy)));
 }
