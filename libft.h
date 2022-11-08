@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT.H
-#define LIBFT.H
+#ifndef LIBFT
+#define LIBFT
 
 #include <stdio.h>
 

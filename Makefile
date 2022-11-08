@@ -6,7 +6,7 @@
 #    By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 13:40:24 by ccosta-c          #+#    #+#              #
-#    Updated: 2022/11/07 17:49:51 by ccosta-c         ###   ########.fr        #
+#    Updated: 2022/11/08 10:12:51 by ccosta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = libft.a
 SRC = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 	ft_isprint.c ft_memcpy.c ft_memset.c ft_strlen.c main.c
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -o
 
 COMPILER = cc
 
@@ -24,7 +24,7 @@ OBJS := $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME):
-	$(COMPILER) $(FLAGS) -o $(NAME) $(SRC)
+	$(COMPILER) $(FLAGS) $(NAME) $(SRC)
 
 clean:
 	rm -f *.o
