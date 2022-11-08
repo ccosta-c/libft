@@ -6,7 +6,7 @@
 #    By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 13:40:24 by ccosta-c          #+#    #+#              #
-#    Updated: 2022/11/08 15:26:45 by ccosta-c         ###   ########.fr        #
+#    Updated: 2022/11/08 17:21:40 by ccosta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = libft.a
 SRC = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 	ft_isprint.c ft_memcpy.c ft_memset.c ft_strlen.c ft_memmove.c main.c \
 
-FLAGS = -Wall -Wextra -Werror -o
+FLAGS = -lbsd -Wall -Wextra -Werror -o
 
 COMPILER = cc
 
