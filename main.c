@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/08 13:06:59 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/08 15:29:42 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ char	textbzero[] = "";
 //-------------------------------------
 char	memcpysrc[] = "Hello";
 char	memcpydest[] = "Why would";
+//-------------------------------------
+char	memmovesrc[] = "111111111111111111111";
+char	memmovedest[] = "This is a long phrase";
 
 //isalpha
 printf("%s\n%s%c\n", "------------------------------", "isalpha - ", alphabetic);
@@ -78,7 +81,11 @@ while (i < 0)
 	i++;
 }
 //memcpy
-printf("%s\n%s%s / %s\n", "------------------------------", "memcpy - ", memcpysrc, memcpydest);
+printf("%s\n%s%s / %s\n", "------------------------------", "memcpy - ", memcpydest, memcpysrc);
 printf("%s%s\n", "My Version - ", ((char*)ft_memcpy(&memcpydest, &memcpysrc, 6)));
 printf("%s%s\n", "System Version - ", ((char*)memcpy(&memcpydest, &memcpysrc, 6)));
+//memmove
+printf("%s\n%s%s / %s\n", "------------------------------", "memmove - ", memmovedest, memmovesrc);
+printf("%s%s\n", "My Version - ", ((char*)ft_memmove(&memmovedest, &memmovesrc, 23)));
+printf("%s%s\n", "System Version - ", ((char*)memmove(&memmovedest, &memmovesrc, 23)));
 }
