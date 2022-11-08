@@ -6,7 +6,7 @@
 #    By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 13:40:24 by ccosta-c          #+#    #+#              #
-#    Updated: 2022/11/08 10:12:51 by ccosta-c         ###   ########.fr        #
+#    Updated: 2022/11/08 11:34:12 by ccosta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ re: fclean all
 
 ## stuff for the tester
 
-file:
+cfile:
 	cc -Wall -Wextra -Werror -c ${SRC} main.c
 
 ofile:
