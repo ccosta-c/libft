@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 13:07:21 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/08 15:08:56 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/09 12:08:23 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	while (i < n)
 	{
-		*(char*)(dest + i) = *(char*)(src + i);
+		*(char *)(dest + i) = *(char *)(src + i);
 		i++;
-
 	}
 	return (dest);
 }

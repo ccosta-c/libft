@@ -6,14 +6,15 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 10:59:34 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/09 10:24:48 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/09 12:04:03 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// The  bzero()  function  erases the data in the n bytes of the memory starting at the
-// location pointed to by s, by writing zeros (bytes containing '\0') to that area.
+// The  bzero()  function  erases the data in the n bytes of the memory starting
+// at the location pointed to by s, by writing zeros (bytes containing '\0')
+// to that area.
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -26,7 +27,7 @@ void	ft_bzero(void *s, size_t n)
 	}
 	while (n > i)
 	{
-		*(char*)(s + i) = '\0';
+		*(char *)(s + i) = '\0';
 		i++;
 	}
 }
