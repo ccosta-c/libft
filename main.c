@@ -6,14 +6,13 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/09 15:36:33 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/09 17:12:29 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <ctype.h>
 #include <bsd/string.h>
-#include <stdio.h>
 
 int main (void)
 {
@@ -51,6 +50,9 @@ int	sizestrlcat = 15;
 char	touppercase = 'a';
 //-------------------------------------
 char	tolowercase = 'A';
+//-------------------------------------
+char	textstrchr[] = "Hello";
+char	chrstrchr = 'l';
 
 //isalpha
 printf("------------------------------\nisalpha - \"%c\"\n", alphabetic);
@@ -122,4 +124,8 @@ printf("System Version - %c\n", toupper(touppercase));
 printf("------------------------------\ntolower - \"%c\"\n", tolowercase);
 printf("My Version - %c\n", ft_tolower(tolowercase));
 printf("System Version - %c\n", tolower(tolowercase));
+//strchr
+printf("------------------------------\nstrchr - STRING \"%s\" SEARCHING FOR \"%c\"\n", textstrchr, chrstrchr);
+printf("My Version - %s\n", (ft_strchr(textstrchr, chrstrchr)));
+printf("System Version - %s\n", (strchr(textstrchr, chrstrchr)));
 }
