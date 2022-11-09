@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/09 17:12:29 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/09 17:28:40 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,9 @@ char	tolowercase = 'A';
 //-------------------------------------
 char	textstrchr[] = "Hello";
 char	chrstrchr = 'l';
+//-------------------------------------
+char	textstrrchr[] = "Hello";
+char	chrstrrchr = 'l';
 
 //isalpha
 printf("------------------------------\nisalpha - \"%c\"\n", alphabetic);
@@ -128,4 +131,8 @@ printf("System Version - %c\n", tolower(tolowercase));
 printf("------------------------------\nstrchr - STRING \"%s\" SEARCHING FOR \"%c\"\n", textstrchr, chrstrchr);
 printf("My Version - %s\n", (ft_strchr(textstrchr, chrstrchr)));
 printf("System Version - %s\n", (strchr(textstrchr, chrstrchr)));
+//strrchr
+printf("------------------------------\nstrrchr - STRING \"%s\" SEARCHING FOR \"%c\"\n", textstrrchr, chrstrrchr);
+printf("My Version - %s\n", (ft_strrchr(textstrrchr, chrstrrchr)));
+printf("System Version - %s\n", (strrchr(textstrrchr, chrstrrchr)));
 }
