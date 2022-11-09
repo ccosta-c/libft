@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/09 11:30:50 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/09 15:36:33 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,14 @@ int	sizememmove = 10;
 char	strlcpysrc[] = "11111111111111111111";
 char	strlcpydest[] = "This is a long phrase";
 int	sizestrlcpy = 15;
+//-------------------------------------
+char	strlcatsrc[] = "11111111111111111111";
+char	strlcatdest[] = "This is a long phrase";
+int	sizestrlcat = 15;
+//-------------------------------------
+char	touppercase = 'a';
+//-------------------------------------
+char	tolowercase = 'A';
 
 //isalpha
 printf("------------------------------\nisalpha - \"%c\"\n", alphabetic);
@@ -102,4 +110,16 @@ printf("%s%s\n", "System Version - ", ((char*)memmove(&memmovedest, &memmovesrc,
 printf("------------------------------\nstrlcpy - DESTINATION \"%s\" SOURCE \"%s\" AND SIZE \"%d\"\n", strlcpydest, strlcpysrc, sizestrlcpy);
 printf("My Version - %lu\n", ft_strlcpy(strlcpydest, strlcpysrc, sizestrlcpy));
 printf("System Version - %lu\n", strlcpy(strlcpydest, strlcpysrc, sizestrlcpy));
+//strlcat
+printf("------------------------------\nstrlcat - DESTINATION \"%s\" SOURCE \"%s\" AND SIZE \"%d\"\n", strlcatdest, strlcatsrc, sizestrlcat);
+printf("My Version - %lu\n", ft_strlcat(strlcatdest, strlcatsrc, sizestrlcat));
+printf("System Version - %lu\n", strlcat(strlcatdest, strlcatsrc, sizestrlcat));
+//toupper
+printf("------------------------------\ntoupper - \"%c\"\n", touppercase);
+printf("My Version - %c\n", ft_toupper(touppercase));
+printf("System Version - %c\n", toupper(touppercase));
+//tolower
+printf("------------------------------\ntolower - \"%c\"\n", tolowercase);
+printf("My Version - %c\n", ft_tolower(tolowercase));
+printf("System Version - %c\n", tolower(tolowercase));
 }
