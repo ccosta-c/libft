@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/08 17:28:02 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/09 11:30:50 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,6 @@ printf("%s%s\n", "My Version - ", ((char*)ft_memmove(&memmovedest, &memmovesrc, 
 printf("%s%s\n", "System Version - ", ((char*)memmove(&memmovedest, &memmovesrc, sizememmove)));
 //strlcpy
 printf("------------------------------\nstrlcpy - DESTINATION \"%s\" SOURCE \"%s\" AND SIZE \"%d\"\n", strlcpydest, strlcpysrc, sizestrlcpy);
-printf("My Version - \n");
-printf("System Version - %lu\n", (strlcpy(strlcpydest, strlcpysrc, sizestrlcpy)));
+printf("My Version - %lu\n", ft_strlcpy(strlcpydest, strlcpysrc, sizestrlcpy));
+printf("System Version - %lu\n", strlcpy(strlcpydest, strlcpysrc, sizestrlcpy));
 }
