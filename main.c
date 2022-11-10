@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/10 11:42:44 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/10 13:25:26 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,27 +25,27 @@ char	stringlength[] = "1234567890";
 //---------------memset----------------
 char	textmemset[] = "TESTESTESTEST";
 char	symbolmemset = '*';
-int		sizememset = 5;
+size_t	sizememset = 5;
 //---------------bzero-----------------
 char	textbzero[] = "testbitch";
-int		sizebzero = 5;
+size_t	sizebzero = 5;
 int		sizestring = 10;
 //---------------memcpy-----------------
 char	memcpysrc[] = "Hello";
 char	memcpydest[] = "Why would";
-int		sizememcpy = 6;
+size_t	sizememcpy = 6;
 //---------------memmove----------------
 char	memmovesrc[] = "111111111111111111111";
 char	memmovedest[] = "This is a long phrase";
-int		sizememmove = 10;
+size_t	sizememmove = 10;
 //---------------strlcpy-----------------
 char	strlcpysrc[] = "11111111111111111111";
 char	strlcpydest[] = "This is a long phrase";
-int		sizestrlcpy = 15;
+size_t	sizestrlcpy = 15;
 //---------------strlcat-----------------
 char	strlcatsrc[] = "11111111111111111111";
 char	strlcatdest[] = "This is a long phrase";
-int		sizestrlcat = 15;
+size_t	sizestrlcat = 15;
 //---------------toupper-----------------
 char	touppercase = 'a';
 //---------------tolower-----------------
@@ -57,9 +57,13 @@ char	chrstrchr = 'l';
 char	textstrrchr[] = "Hello";
 char	chrstrrchr = 'l';
 //---------------strncmp-----------------
-char	strncmps1[] = "";
-char	strncmps2[] = "";
-int		strncmpn = 100;
+char	s1strncmp[] = "";
+char	s2strncmp[] = "";
+size_t	nstrncmp = 1;
+//----------------memchr-----------------
+char	textmemchr[] = "Hello";
+char	chrmemchr = 'o';
+size_t	sizememchr = 1;
 
 //isalpha
 printf("------------------------------\nisalpha - \"%c\"\n", alphabetic);
@@ -86,11 +90,11 @@ printf("------------------------------\nstrlen - \"%s\"\n", stringlength);
 printf("My Version - %lu\n", ft_strlen(stringlength));
 printf("System Version - %lu\n", strlen(stringlength));
 //memset
-printf("------------------------------\nmemset - STRING \"%s\" AND SIZE \"%d\"\n", textmemset, sizememset);
+printf("------------------------------\nmemset - STRING \"%s\" AND SIZE \"%zu\"\n", textmemset, sizememset);
 printf("My Version - %s\n", ((char*)ft_memset(&textmemset, symbolmemset, sizememset)));
 printf("System Version - %s\n", ((char*)memset(&textmemset, symbolmemset, sizememset)));
 //bzero
-printf("------------------------------\nbzero - STRING \"%s\" AND SIZE \"%d\"\n", textbzero, sizebzero);
+printf("------------------------------\nbzero - STRING \"%s\" AND SIZE \"%zu\"\n", textbzero, sizebzero);
 printf("My Version     - ");
 int	i = 0;
 ft_bzero(textbzero, sizebzero);
@@ -108,19 +112,19 @@ while (i < sizestring)
 	i++;
 }
 //memcpy
-printf("\n------------------------------\nmemcpy - DESTINATION \"%s\" SOURCE \"%s\" AND SIZE \"%d\"\n", memcpydest, memcpysrc, sizememcpy);
+printf("\n------------------------------\nmemcpy - DESTINATION \"%s\" SOURCE \"%s\" AND SIZE \"%zu\"\n", memcpydest, memcpysrc, sizememcpy);
 printf("My Version - %s\n", ((char*)ft_memcpy(&memcpydest, &memcpysrc, sizememcpy)));
 printf("System Version - %s\n", ((char*)memcpy(&memcpydest, &memcpysrc, sizememcpy)));
 //memmove
-printf("------------------------------\nmemmove - DESTINATION \"%s\" SOURCE \"%s\" AND SIZE \"%d\"\n", memmovedest, memmovesrc, sizememmove);
+printf("------------------------------\nmemmove - DESTINATION \"%s\" SOURCE \"%s\" AND SIZE \"%zu\"\n", memmovedest, memmovesrc, sizememmove);
 printf("%s%s\n", "My Version - ", ((char*)ft_memmove(&memmovedest, &memmovesrc, sizememmove)));
 printf("%s%s\n", "System Version - ", ((char*)memmove(&memmovedest, &memmovesrc, sizememmove)));
 //strlcpy
-printf("------------------------------\nstrlcpy - DESTINATION \"%s\" SOURCE \"%s\" AND SIZE \"%d\"\n", strlcpydest, strlcpysrc, sizestrlcpy);
+printf("------------------------------\nstrlcpy - DESTINATION \"%s\" SOURCE \"%s\" AND SIZE \"%zu\"\n", strlcpydest, strlcpysrc, sizestrlcpy);
 printf("My Version - %lu\n", ft_strlcpy(strlcpydest, strlcpysrc, sizestrlcpy));
 printf("System Version - %lu\n", strlcpy(strlcpydest, strlcpysrc, sizestrlcpy));
 //strlcat
-printf("------------------------------\nstrlcat - DESTINATION \"%s\" SOURCE \"%s\" AND SIZE \"%d\"\n", strlcatdest, strlcatsrc, sizestrlcat);
+printf("------------------------------\nstrlcat - DESTINATION \"%s\" SOURCE \"%s\" AND SIZE \"%zu\"\n", strlcatdest, strlcatsrc, sizestrlcat);
 printf("My Version - %lu\n", ft_strlcat(strlcatdest, strlcatsrc, sizestrlcat));
 printf("System Version - %lu\n", strlcat(strlcatdest, strlcatsrc, sizestrlcat));
 //toupper
@@ -140,7 +144,11 @@ printf("------------------------------\nstrrchr - STRING \"%s\" SEARCHING FOR \"
 printf("My Version - %s\n", (ft_strrchr(textstrrchr, chrstrrchr)));
 printf("System Version - %s\n", (strrchr(textstrrchr, chrstrrchr)));
 //strncmp
-printf("------------------------------\nstrncmp - STRING1 \"%s\" STRING2 \"%s\" COMPARING UP TO \"%d\"\n", strncmps1, strncmps2, strncmpn);
-printf("My Version - %d\n", ft_strncmp(strncmps1, strncmps2, strncmpn));
-printf("System Version - %d\n", strncmp(strncmps1, strncmps2, strncmpn));
+printf("------------------------------\nstrncmp - STRING1 \"%s\" STRING2 \"%s\" COMPARING UP TO \"%zu\"\n", s1strncmp, s2strncmp, nstrncmp);
+printf("My Version - %d\n", ft_strncmp(s1strncmp, s2strncmp, nstrncmp));
+printf("System Version - %d\n", strncmp(s1strncmp, s2strncmp, nstrncmp));
+//memchr
+printf("------------------------------\nmemchr - STRING \"%s\" SEARCHING FOR \"%c\" UP TO %zu  BYTES\n", textmemchr, chrmemchr, sizememchr);
+printf("My Version - %s\n", ((char *)ft_memchr(textmemchr, chrmemchr, sizememchr)));
+printf("System Version - %s\n", ((char *)memchr(textmemchr, chrmemchr, sizememchr)));
 }
