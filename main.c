@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/09 17:28:40 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/10 11:42:44 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,40 +22,44 @@ char	alphanumeric = '!';
 char	ascii = '.';
 char	print = '!';
 char	stringlength[] = "1234567890";
-//-------------------------------------
+//---------------memset----------------
 char	textmemset[] = "TESTESTESTEST";
 char	symbolmemset = '*';
-int	sizememset = 5;
-//-------------------------------------
+int		sizememset = 5;
+//---------------bzero-----------------
 char	textbzero[] = "testbitch";
-int	sizebzero = 5;
-int	sizestring = 10;
-//-------------------------------------
+int		sizebzero = 5;
+int		sizestring = 10;
+//---------------memcpy-----------------
 char	memcpysrc[] = "Hello";
 char	memcpydest[] = "Why would";
-int	sizememcpy = 6;
-//-------------------------------------
+int		sizememcpy = 6;
+//---------------memmove----------------
 char	memmovesrc[] = "111111111111111111111";
 char	memmovedest[] = "This is a long phrase";
-int	sizememmove = 10;
-//-------------------------------------
+int		sizememmove = 10;
+//---------------strlcpy-----------------
 char	strlcpysrc[] = "11111111111111111111";
 char	strlcpydest[] = "This is a long phrase";
-int	sizestrlcpy = 15;
-//-------------------------------------
+int		sizestrlcpy = 15;
+//---------------strlcat-----------------
 char	strlcatsrc[] = "11111111111111111111";
 char	strlcatdest[] = "This is a long phrase";
-int	sizestrlcat = 15;
-//-------------------------------------
+int		sizestrlcat = 15;
+//---------------toupper-----------------
 char	touppercase = 'a';
-//-------------------------------------
+//---------------tolower-----------------
 char	tolowercase = 'A';
-//-------------------------------------
+//----------------strchr-----------------
 char	textstrchr[] = "Hello";
 char	chrstrchr = 'l';
-//-------------------------------------
+//---------------strrchr-----------------
 char	textstrrchr[] = "Hello";
 char	chrstrrchr = 'l';
+//---------------strncmp-----------------
+char	strncmps1[] = "";
+char	strncmps2[] = "";
+int		strncmpn = 100;
 
 //isalpha
 printf("------------------------------\nisalpha - \"%c\"\n", alphabetic);
@@ -135,4 +139,8 @@ printf("System Version - %s\n", (strchr(textstrchr, chrstrchr)));
 printf("------------------------------\nstrrchr - STRING \"%s\" SEARCHING FOR \"%c\"\n", textstrrchr, chrstrrchr);
 printf("My Version - %s\n", (ft_strrchr(textstrrchr, chrstrrchr)));
 printf("System Version - %s\n", (strrchr(textstrrchr, chrstrrchr)));
+//strncmp
+printf("------------------------------\nstrncmp - STRING1 \"%s\" STRING2 \"%s\" COMPARING UP TO \"%d\"\n", strncmps1, strncmps2, strncmpn);
+printf("My Version - %d\n", ft_strncmp(strncmps1, strncmps2, strncmpn));
+printf("System Version - %d\n", strncmp(strncmps1, strncmps2, strncmpn));
 }
