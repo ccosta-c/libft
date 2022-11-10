@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/10 13:41:23 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/10 15:31:39 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,10 @@ size_t	sizememchr = 1;
 char	s1memcmp[] = "Hello";
 char	s2memcmp[] = "HellO";
 size_t	nmemcmp = 1;
+//----------------strnstr-----------------
+char	bigstrnstr[] = "i am awesome";
+char	littlestrnstr[] = "";
+size_t	nstrnstr = 0;
 
 //isalpha
 printf("------------------------------\nisalpha - \"%c\"\n", alphabetic);
@@ -152,11 +156,15 @@ printf("------------------------------\nstrncmp - STRING1 \"%s\" STRING2 \"%s\" 
 printf("My Version - %d\n", ft_strncmp(s1strncmp, s2strncmp, nstrncmp));
 printf("System Version - %d\n", strncmp(s1strncmp, s2strncmp, nstrncmp));
 //memchr
-printf("------------------------------\nmemchr - STRING \"%s\" SEARCHING FOR \"%c\" UP TO \"%zu\"  BYTES\n", textmemchr, chrmemchr, sizememchr);
+printf("------------------------------\nmemchr - STRING \"%s\" SEARCHING FOR \"%c\" UP TO \"%zu\" BYTES\n", textmemchr, chrmemchr, sizememchr);
 printf("My Version - %s\n", ((char *)ft_memchr(textmemchr, chrmemchr, sizememchr)));
 printf("System Version - %s\n", ((char *)memchr(textmemchr, chrmemchr, sizememchr)));
 //memcmp
-printf("------------------------------\nmemcmp - STRING \"%s\" STRING2 \"%s\" COMPARING UP TO \"%zu\"  BYTES\n", s1memcmp, s2memcmp, nmemcmp);
+printf("------------------------------\nmemcmp - STRING \"%s\" STRING2 \"%s\" COMPARING UP TO \"%zu\" BYTES\n", s1memcmp, s2memcmp, nmemcmp);
 printf("My Version - %d\n", (ft_memcmp(s1memcmp, s2memcmp, nmemcmp)));
 printf("System Version - %d\n", (memcmp(s1memcmp, s2memcmp, nmemcmp)));
+//strnstr
+printf("------------------------------\nstrnstr - SEARCHING FOR \"%s\" IN \"%s\" UP TO THE \"%zu\" POSITION\n", littlestrnstr, bigstrnstr, nstrnstr);
+printf("My Version - %s\n", (ft_strnstr(bigstrnstr, littlestrnstr, nstrnstr)));
+printf("System Version - %s\n", (strnstr(bigstrnstr, littlestrnstr, nstrnstr)));
 }
