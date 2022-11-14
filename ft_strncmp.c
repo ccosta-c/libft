@@ -6,16 +6,16 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 18:32:17 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/10 13:16:46 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/14 14:36:23 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int 	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	
+
 	i = 0;
 	if (n == 0)
 	{

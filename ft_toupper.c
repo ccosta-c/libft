@@ -6,13 +6,13 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:03:47 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/09 15:29:09 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/14 14:32:29 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{

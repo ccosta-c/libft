@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 13:28:00 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/10 13:51:10 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/14 14:33:22 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	str1 = (char *)s1;
 	str2 = (char *)s2;
-	
 	i = 0;
 	if (n == 0)
 	{
