@@ -6,12 +6,13 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/14 12:18:35 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/14 14:31:46 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <ctype.h>
+#include <stdlib.h>
 #include <bsd/string.h>
 
 int main (void)
@@ -72,6 +73,8 @@ size_t	nmemcmp = 1;
 char	bigstrnstr[] = "i am awesome";
 char	littlestrnstr[] = "aw";
 size_t	nstrnstr = 10;
+//----------------atoi-----------------
+char	atoistr[] = "    -+1739249";
 
 //isalpha
 printf("------------------------------\nisalpha - \"%c\"\n", alphabetic);
@@ -167,4 +170,8 @@ printf("System Version - %d\n", (memcmp(s1memcmp, s2memcmp, nmemcmp)));
 printf("------------------------------\nstrnstr - SEARCHING FOR \"%s\" IN \"%s\" UP TO THE \"%zu\" POSITION\n", littlestrnstr, bigstrnstr, nstrnstr);
 printf("My Version - %s\n", (ft_strnstr(bigstrnstr, littlestrnstr, nstrnstr)));
 printf("System Version - %s\n", (strnstr(bigstrnstr, littlestrnstr, nstrnstr)));
+//atoi
+printf("------------------------------\natoi - \"%s\"\n", atoistr);
+printf("My Version - %d\n", ft_atoi(atoistr));
+printf("System Version - %d\n", atoi(atoistr));
 }
