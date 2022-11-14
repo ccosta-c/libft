@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 13:27:59 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/09 12:09:12 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/14 16:58:28 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if ((size_t)dest - (size_t)src < n)
 	{
 		i = n - 1;
-		while (i >= 0 && i < n)
+		while (i < n)
 		{
 			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 			i--;
