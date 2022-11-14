@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 14:55:20 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/09 12:04:59 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/14 19:04:38 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	*ft_memset(void *s, int c, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (n >= i)
+	while (n > i)
 	{
-		*(char *)(s + i) = c;
+		*(unsigned char *)(s + i) = c;
 		i++;
 	}
 	return (s);
