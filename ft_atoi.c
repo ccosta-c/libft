@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 12:21:30 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/14 14:35:44 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/14 20:12:34 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,18 @@ static int	ft_whitespace(const char *str, int *ptr_i)
 
 	i = 0;
 	minus = 1;
-	while ((str[i] >= 9 && str[i] < 13) || (str[i] == 32))
+	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
 	{
 		i++;
 	}
-	i++;
 	if (str[i] == '-')
 	{
 		minus *= -1;
+		i++;
+	}
+	if (str[i] == '+')
+	{
+		i++;
 	}
 	*ptr_i = i;
 	return (minus);
