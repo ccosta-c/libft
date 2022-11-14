@@ -6,13 +6,12 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/14 14:31:46 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/14 14:40:03 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <ctype.h>
-#include <stdlib.h>
 #include <bsd/string.h>
 
 int main (void)

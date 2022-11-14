@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 15:07:09 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/14 14:35:06 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/14 14:39:53 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdio.h>
+#include <stdlib.h>
 
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
