@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/10 15:31:39 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/14 12:18:35 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ char	s2memcmp[] = "HellO";
 size_t	nmemcmp = 1;
 //----------------strnstr-----------------
 char	bigstrnstr[] = "i am awesome";
-char	littlestrnstr[] = "";
-size_t	nstrnstr = 0;
+char	littlestrnstr[] = "aw";
+size_t	nstrnstr = 10;
 
 //isalpha
 printf("------------------------------\nisalpha - \"%c\"\n", alphabetic);
