@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/14 14:40:03 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/15 14:10:56 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,11 @@ char	strlcpysrc[] = "11111111111111111111";
 char	strlcpydest[] = "This is a long phrase";
 size_t	sizestrlcpy = 15;
 //---------------strlcat-----------------
-char	strlcatsrc[] = "11111111111111111111";
-char	strlcatdest[] = "This is a long phrase";
-size_t	sizestrlcat = 15;
+char	strlcatsrc[] = "123456789";
+char	strlcatsrc1[] = "123456789";
+char	strlcatdest[] = "abcdefghi";
+char	strlcatdest1[] = "abcdefghi";
+size_t	sizestrlcat = 0;
 //---------------toupper-----------------
 char	touppercase = 'a';
 //---------------tolower-----------------
@@ -74,6 +76,8 @@ char	littlestrnstr[] = "aw";
 size_t	nstrnstr = 10;
 //----------------atoi-----------------
 char	atoistr[] = "    -+1739249";
+//----------------strdup-----------------
+char	textstrdup[] = "Hello World!";
 
 //isalpha
 printf("------------------------------\nisalpha - \"%c\"\n", alphabetic);
@@ -135,8 +139,8 @@ printf("My Version - %lu\n", ft_strlcpy(strlcpydest, strlcpysrc, sizestrlcpy));
 printf("System Version - %lu\n", strlcpy(strlcpydest, strlcpysrc, sizestrlcpy));
 //strlcat
 printf("------------------------------\nstrlcat - DESTINATION \"%s\" SOURCE \"%s\" AND SIZE \"%zu\"\n", strlcatdest, strlcatsrc, sizestrlcat);
-printf("My Version - %lu\n", ft_strlcat(strlcatdest, strlcatsrc, sizestrlcat));
-printf("System Version - %lu\n", strlcat(strlcatdest, strlcatsrc, sizestrlcat));
+printf("My Version - %lu\n%s\n", ft_strlcat(strlcatdest, strlcatsrc, sizestrlcat), strlcatdest);
+printf("System Version - %lu\n%s\n", strlcat(strlcatdest1, strlcatsrc1, sizestrlcat), strlcatdest1);
 //toupper
 printf("------------------------------\ntoupper - \"%c\"\n", touppercase);
 printf("My Version - %c\n", ft_toupper(touppercase));
@@ -173,4 +177,11 @@ printf("System Version - %s\n", (strnstr(bigstrnstr, littlestrnstr, nstrnstr)));
 printf("------------------------------\natoi - \"%s\"\n", atoistr);
 printf("My Version - %d\n", ft_atoi(atoistr));
 printf("System Version - %d\n", atoi(atoistr));
+//calloc
+
+
+//strdup
+printf("------------------------------\nstrdup - \"%s\"\n", textstrdup);
+printf("My Version - %s\n", ft_strdup(textstrdup));
+printf("System Version - %s\n", strdup(textstrdup));
 }
