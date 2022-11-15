@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/15 14:10:56 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/15 19:05:26 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	s2strncmp[] = "";
 size_t	nstrncmp = 1;
 //----------------memchr-----------------
 char	textmemchr[] = "Hello";
-char	chrmemchr = 'o';
+char	chrmemchr = '';
 size_t	sizememchr = 1;
 //----------------memcmp-----------------
 char	s1memcmp[] = "Hello";
@@ -78,6 +78,10 @@ size_t	nstrnstr = 10;
 char	atoistr[] = "    -+1739249";
 //----------------strdup-----------------
 char	textstrdup[] = "Hello World!";
+//----------------substr-----------------
+char	textsubstr[] = "Hello World!";
+size_t	lensubstr = 5;
+unsigned int	startsubstr = 6;
 
 //isalpha
 printf("------------------------------\nisalpha - \"%c\"\n", alphabetic);
@@ -178,10 +182,11 @@ printf("------------------------------\natoi - \"%s\"\n", atoistr);
 printf("My Version - %d\n", ft_atoi(atoistr));
 printf("System Version - %d\n", atoi(atoistr));
 //calloc
-
-
 //strdup
 printf("------------------------------\nstrdup - \"%s\"\n", textstrdup);
 printf("My Version - %s\n", ft_strdup(textstrdup));
 printf("System Version - %s\n", strdup(textstrdup));
+//substr
+printf("------------------------------\nsubstr - \"%s\" FROM \"%d\" UP TO \"%zu\"\n", textsubstr, startsubstr, lensubstr);
+printf("My Version - %s\n", ft_substr(textsubstr, startsubstr, lensubstr));
 }
