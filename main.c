@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/15 19:05:26 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/16 14:34:46 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	s2strncmp[] = "";
 size_t	nstrncmp = 1;
 //----------------memchr-----------------
 char	textmemchr[] = "Hello";
-char	chrmemchr = '';
+char	chrmemchr = 'c';
 size_t	sizememchr = 1;
 //----------------memcmp-----------------
 char	s1memcmp[] = "Hello";
@@ -76,12 +76,20 @@ char	littlestrnstr[] = "aw";
 size_t	nstrnstr = 10;
 //----------------atoi-----------------
 char	atoistr[] = "    -+1739249";
+//----------------calloc-----------------
+size_t	sizecalloc = 30;
 //----------------strdup-----------------
 char	textstrdup[] = "Hello World!";
 //----------------substr-----------------
 char	textsubstr[] = "Hello World!";
 size_t	lensubstr = 5;
 unsigned int	startsubstr = 6;
+//----------------strjoin-----------------
+char	textstrjoin[] = "Hello";
+char	textstrjoin1[] = "World!";
+//----------------strtrim-----------------
+char	textstrtrim[] = "Hello World!";
+char	setstrtrim[] = "Hello";
 
 //isalpha
 printf("------------------------------\nisalpha - \"%c\"\n", alphabetic);
@@ -182,6 +190,14 @@ printf("------------------------------\natoi - \"%s\"\n", atoistr);
 printf("My Version - %d\n", ft_atoi(atoistr));
 printf("System Version - %d\n", atoi(atoistr));
 //calloc
+printf("------------------------------\ncalloc - ALLOCATING \"%zu\" BYTES\n", sizecalloc);
+	char *dest1;
+	char *dest2;
+
+	dest1 = (char *)calloc(sizecalloc, 1);
+	printf("dst >> %s \n", dest1);
+	dest2 = (char *)ft_calloc(sizecalloc, 1);
+	printf("dst2 >> %s \n", dest2);
 //strdup
 printf("------------------------------\nstrdup - \"%s\"\n", textstrdup);
 printf("My Version - %s\n", ft_strdup(textstrdup));
@@ -189,4 +205,10 @@ printf("System Version - %s\n", strdup(textstrdup));
 //substr
 printf("------------------------------\nsubstr - \"%s\" FROM \"%d\" UP TO \"%zu\"\n", textsubstr, startsubstr, lensubstr);
 printf("My Version - %s\n", ft_substr(textsubstr, startsubstr, lensubstr));
+//strjoin
+printf("------------------------------\nstrjoin - \"%s\" AND \"%s\"\n", textstrjoin, textstrjoin1);
+printf("My Version - %s\n", ft_strjoin(textstrjoin, textstrjoin1));
+//strtrim
+printf("------------------------------\nstrtrim - \"%s\" REMOVE \"%s\"\n", textstrtrim, setstrtrim);
+printf("My Version - %s\n", ft_strtrim(textstrtrim, setstrtrim));
 }
