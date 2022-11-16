@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/16 14:34:46 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/16 16:10:23 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,9 @@ char	textstrjoin1[] = "World!";
 //----------------strtrim-----------------
 char	textstrtrim[] = "Hello World!";
 char	setstrtrim[] = "Hello";
+//----------------split-----------------
+char	textsplit[] = "Hello    World how is stuff going?";
+char	chrsplit =  ' ';
 
 //isalpha
 printf("------------------------------\nisalpha - \"%c\"\n", alphabetic);
@@ -211,4 +214,14 @@ printf("My Version - %s\n", ft_strjoin(textstrjoin, textstrjoin1));
 //strtrim
 printf("------------------------------\nstrtrim - \"%s\" REMOVE \"%s\"\n", textstrtrim, setstrtrim);
 printf("My Version - %s\n", ft_strtrim(textstrtrim, setstrtrim));
+//split
+printf("------------------------------\nsplit - \"%s\" BY \"%c\"\n", textsplit, chrsplit);
+char *strtest = strdup(textsplit);
+char **array = ft_split(strtest, chrsplit);
+i = 0;
+while (array[i])
+{
+	printf("Slot %d - %s\n", i, array[i]);
+	i++;
+}
 }
