@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:35:58 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/16 16:10:23 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/17 13:26:19 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ size_t	nmemcmp = 1;
 char	bigstrnstr[] = "i am awesome";
 char	littlestrnstr[] = "aw";
 size_t	nstrnstr = 10;
-//----------------atoi-----------------
+//----------------atoi------------------
 char	atoistr[] = "    -+1739249";
 //----------------calloc-----------------
 size_t	sizecalloc = 30;
@@ -88,11 +88,13 @@ unsigned int	startsubstr = 6;
 char	textstrjoin[] = "Hello";
 char	textstrjoin1[] = "World!";
 //----------------strtrim-----------------
-char	textstrtrim[] = "Hello World!";
-char	setstrtrim[] = "Hello";
-//----------------split-----------------
+char	textstrtrim[] = "Hel leH";
+char	setstrtrim[] = "Hel";
+//----------------split-------------------
 char	textsplit[] = "Hello    World how is stuff going?";
 char	chrsplit =  ' ';
+//-----------------itoa--------------------
+int		itoaint = -234;
 
 //isalpha
 printf("------------------------------\nisalpha - \"%c\"\n", alphabetic);
@@ -224,4 +226,7 @@ while (array[i])
 	printf("Slot %d - %s\n", i, array[i]);
 	i++;
 }
+//itoa
+printf("------------------------------\nitoa - Number \"%d\"\n", itoaint);
+printf("My Version - %s\n", ft_itoa(itoaint));
 }

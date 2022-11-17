@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 15:07:09 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/16 16:03:37 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/17 13:21:55 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ isascii - test for an ASCII character;
 memcpy - copy memory area up to n bytes, not handle overlaps;
 memmove - copy memory area up to n bytes, handles overlaps;
 memset - fills the first n bytes of the memory area pointed to by s with the
-constant byte c;
-
+	constant byte c;
 strlen - calculate the length of a string;
 strlcpy - copy string up to n bytes;
 strlcat - concatenate string up to n bytes;
@@ -36,11 +35,11 @@ atoi - convert ASCII string to integer;
 calloc - allocate memory for an array;
 strdup - duplicate a string;
 substr - allocate and return a substring from the string ’s’, starting at 
-index ’start’ and of maximum size ’len’;
-
+	index ’start’ and of maximum size ’len’;
 strjoin - concatenate ’s1’ and ’s2’;
 strtrim - trim characters in the string ’set’ from the beginning and the end of
- the string ’s1’;
+ 	the string ’s1’;
+itoa - convert an integer to a string;
 */
 
 #ifndef LIBFT_H
@@ -48,6 +47,7 @@ strtrim - trim characters in the string ’set’ from the beginning and the end
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
@@ -76,5 +76,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(const char *s, char c);
+char	*ft_itoa(int n);
+void	ft_putchar_fd(char c, int fd);
 
 #endif
