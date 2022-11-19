@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 14:36:31 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/19 16:45:09 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/19 17:38:07 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ char	**ft_split(const char *s, char c)
 	int		i;
 
 	i = 0;
-	nbr_words = c_words(s, ' ');
+	nbr_words = c_words(s, c);
 	words_array = (char **)malloc((nbr_words + 1) * sizeof(char *));
 	if (!words_array)
 	{
