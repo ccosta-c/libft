@@ -6,40 +6,63 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 15:07:09 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/19 16:50:45 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/19 17:23:08 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-bzero - write zeroes to a byte string;
-isalnum - test for any character for which isalpha or isdigit is true;
-isalpha - test for an alphabetic character;
-isdigit - test for a decimal digit character;
-isascii - test for an ASCII character;
-memcpy - copy memory area up to n bytes, not handle overlaps;
-memmove - copy memory area up to n bytes, handles overlaps;
-memset - fills the first n bytes of the memory area pointed to by s with the
-	constant byte c;
-strlen - calculate the length of a string;
-strlcpy - copy string up to n bytes;
-strlcat - concatenate string up to n bytes;
-strtoupper - convert lowercase letter to uppercase;
-strtolower - convert uppercase letter to lowercase;
-strchr - locate character in string;
-strrchr - locate last occurrence of character in string;
-strncmp - compare strings up to n bytes;
-memchr - locate byte in byte string;
-memcmp - compare bytes in memory;
-strnstr - locate a substring in a string up to n bytes;
-atoi - convert ASCII string to integer;
-calloc - allocate memory for an array;
-strdup - duplicate a string;
-substr - allocate and return a substring from the string ’s’, starting at 
-	index ’start’ and of maximum size ’len’;
-strjoin - concatenate ’s1’ and ’s2’;
-strtrim - trim characters in the string ’set’ from the beginning and the end of
- 	the string ’s1’;
-itoa - convert an integer to a string;
+ft_isalpha 	- Test for an alphabetic character;
+ft_isdigit 	- Test for a decimal digit character;
+ft_isalnum 	- Test for an alphanumeric character;
+ft_isascii 	- Test for an ASCII character;
+ft_isprint 	- Test for any printing character, including space;
+ft_strlen 	- Calculate the length of a string;
+ft_memset 	- Fills the first *n* bytes of the memory area pointed to by *s*
+ft_bzero	- Write zeroes to a byte string;
+ft_memcpy 	- Copy memory area up to *n* bytes, does not handle overlaps;
+ft_memmove 	- Copy memory area up to *n* bytes, handles overlaps;
+ft_strlcpy 	- Copy string up to *n* bytes;
+	constant byte *c*;
+ft_strlcat 	- Concatenate string up to *n* bytes;
+ft_toupper 	- Convert lowercase letter to uppercase;
+ft_tolower 	- Convert uppercase letter to lowercase;
+ft_strchr 	- Locate character in a string;
+ft_strrchr 	- Locate last occurrence of character in a string;
+ft_strncmp 	- Compare strings up to *n* bytes;
+ft_memchr 	- Locate a byte in a byte string;
+ft_memcmp	- Compare bytes in memory;
+ft_strnstr	- Locate a substring in a string up to *n* bytes;
+ft_atoi 	- Convert ASCII string to integer;
+ft_calloc	- Allocate memory for an array;
+ft_strdup	- Duplicate a string;
+ft_substr	- Allocate and return a substring from the string *s*, starting at 
+	index *start* and of maximum size *len*;
+ft_strjoin 	- Concatenate *s1* and *s2*;
+ft_strtrim 	- Trim characters in the string *set* from the beginning and the end 
+	of the string *s1*;
+ft_split 	- Split *s* using the character *c* as a delimiter;
+ft_itoa 	- Convert an integer to a string;
+ft_strmapi 	- Apply the function *f* to each character of the string *s* to 	create a new string (with malloc) resulting from successive applications of *f*;
+ft_striteri - Apply the function *f* to each character of the string *s* 
+	to modify *s* resulting from successive applications of *f*;
+ft_putchar_fd	- Output the character *c* to the given file descriptor;
+ft_putstr_fd	- Output the string *s* to the given file descriptor;
+ft_putendl_fd	- Output the string *s* to the given file descriptor, 
+	followed by a newline;
+ft_putnbr_fd	- Output the integer *n* to the given file descriptor;
+ft_lstnew		- Allocates a new node, next value is *NULL*;
+ft_lstadd_front	- Add the node *new* at the beginning of the list;
+ft_lstsize		- Counts the number of nodes in a list;
+ft_lstlast		- Returns the last node of the list;
+ft_lstadd_back	- Add the node *new* at the end of the list;
+ft_lstdelone	- Free the memory of the node *lst*;
+ft_lstclear		- Free the memory of the list *lst*;
+ft_lstiter		- Iterates the list *lst* and applies the function *f* to the 
+	content of each node;
+ft_lstmap		- Iterates the list *lst* and applies the function *f* to the
+	content of each node. Creates a new list resulting of the successive 
+	applications of the function *f*.
+*/	
 */
 
 #ifndef LIBFT_H
@@ -55,15 +78,15 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;		
 
-void	ft_bzero(void *s, size_t n);
-int		ft_isalnum(int c);
 int		ft_isalpha(int c);
-int		ft_isascii(int c);
 int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
 int		ft_isprint(int c);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-void	*ft_memset(void *s, int c, size_t n);
 size_t	ft_strlen(const char *s);
+void	*ft_memset(void *s, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
