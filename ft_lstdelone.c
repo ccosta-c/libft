@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 14:45:08 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/19 14:58:52 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/19 15:46:02 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if(!lst || !del)
+	if (!lst || !del)
 	{
 		return ;
 	}

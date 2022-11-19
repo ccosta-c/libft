@@ -6,16 +6,16 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 15:20:46 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/19 15:41:50 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/19 15:50:06 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap (t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*head;
-	
+
 	head = NULL;
 	if (lst == NULL || f == NULL || del == NULL)
 	{
@@ -26,5 +26,5 @@ t_list *ft_lstmap (t_list *lst, void *(*f)(void *), void (*del)(void *))
 		ft_lstadd_back(&head, ft_lstnew((*f)(lst->content)));
 		lst = lst->next;
 	}
-	return(head);
+	return (head);
 }

@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 16:05:27 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/18 16:14:57 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/19 16:41:43 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_lstsize(t_list *lst)
 {
 	int		count;
-	t_list 	*ptr;
+	t_list	*ptr;
 
 	count = 0;
 	if (!lst)

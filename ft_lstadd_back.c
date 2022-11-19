@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 16:36:48 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/18 16:56:32 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/19 16:08:00 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*ptr;
 
-	if(lst)
+	if (lst)
 	{
-		if(*lst == NULL)
+		if (*lst == NULL)
 		{
 			*lst = new;
 		}

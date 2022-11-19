@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 19:28:30 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/16 14:10:58 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/19 16:45:54 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int start;
-	int end;
-	char *trimmed;
+	int		start;
+	int		end;
+	char	*trimmed;
 
-	if(!s1 || !set)
+	if (!s1 || !set)
 	{
 		return (0);
 	}

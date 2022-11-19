@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 15:13:00 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/19 15:16:35 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/19 15:45:24 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*current;
 	t_list	*next;
-	
-	if(lst == NULL || f == NULL)
+
+	if (lst == NULL || f == NULL)
 	{
 		return ;
 	}

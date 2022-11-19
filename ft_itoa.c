@@ -6,13 +6,13 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 17:09:54 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/17 12:05:49 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/19 16:05:29 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	unsigned int nbr_len(int n)
+static unsigned int	nbr_len(int n)
 {
 	int	len;
 
@@ -33,6 +33,15 @@ static	unsigned int nbr_len(int n)
 	return (len);
 }
 
+static int	*ft_minimum_int(int *n, char *result, int *len)
+{
+	*(result + *len) = 48 + 8;
+	*n = *n / 10;
+	*n *= -1;
+	*len -= 1;
+	return (n);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*result;
@@ -50,14 +59,9 @@ char	*ft_itoa(int n)
 	{
 		result[0] = '-';
 		n *= -1;
-	} 
-	if (n == -2147483648)
-	{
-		result[len] = 48 + 8;
-		n = n / 10;
-		n *= -1;
-		len -= 1;
 	}
+	if (n == -2147483648)
+		n = *(ft_minimum_int(&n, result, &len));
 	while (n != 0)
 	{
 		result[len] = 48 + (n % 10);

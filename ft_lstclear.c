@@ -6,18 +6,18 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 15:03:59 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/19 15:09:46 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/19 16:12:27 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*current;
 	t_list	*next;
 
-	if(lst == NULL || *lst == NULL || del == NULL)
+	if (lst == NULL || *lst == NULL || del == NULL)
 	{
 		return ;
 	}

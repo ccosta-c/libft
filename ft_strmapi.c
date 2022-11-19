@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 14:49:15 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/17 15:02:06 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/19 16:08:26 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
-	char *ptr;
+	int		i;
+	char	*ptr;
 
 	i = 0;
 	if (!s || !f)
