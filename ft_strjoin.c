@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 19:08:10 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/16 15:48:20 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/18 18:11:24 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		s1len;
 	char	*str;
 
+	if (!s1)
+	{
+		return (NULL);
+	}
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
 	if (s1len == 0 || s2len == 0)
