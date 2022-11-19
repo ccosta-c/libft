@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 15:07:09 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/19 17:28:52 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/19 17:34:12 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ ft_bzero	- Write zeroes to a byte string;
 ft_memcpy 	- Copy memory area up to *n* bytes, does not handle overlaps;
 ft_memmove 	- Copy memory area up to *n* bytes, handles overlaps;
 ft_strlcpy 	- Copy string up to *n* bytes;
-	constant byte *c*;
 ft_strlcat 	- Concatenate string up to *n* bytes;
 ft_toupper 	- Convert lowercase letter to uppercase;
 ft_tolower 	- Convert uppercase letter to lowercase;
@@ -35,14 +34,15 @@ ft_strnstr	- Locate a substring in a string up to *n* bytes;
 ft_atoi 	- Convert ASCII string to integer;
 ft_calloc	- Allocate memory for an array;
 ft_strdup	- Duplicate a string;
-ft_substr	- Allocate and return a substring from the string *s*, starting at 
-	index *start* and of maximum size *len*;
+ft_substr	- Allocate and return a substring from the string *s*, starting
+	at index *start* and of maximum size *len*;
 ft_strjoin 	- Concatenate *s1* and *s2*;
 ft_strtrim 	- Trim characters in the string *set* from the beginning and the end 
 	of the string *s1*;
 ft_split 	- Split *s* using the character *c* as a delimiter;
 ft_itoa 	- Convert an integer to a string;
-ft_strmapi 	- Apply the function *f* to each character of the string *s* to 	create a new string (with malloc) resulting from successive applications of *f*;
+ft_strmapi 	- Apply the function *f* to each character of the string *s* to 
+create a new string (with malloc) resulting from successive applications of *f*;
 ft_striteri - Apply the function *f* to each character of the string *s* 
 	to modify *s* resulting from successive applications of *f*;
 ft_putchar_fd	- Output the character *c* to the given file descriptor;
