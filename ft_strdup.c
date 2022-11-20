@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 13:45:22 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/16 15:54:45 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/20 12:21:12 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,6 @@ char	*ft_strdup(const char *s)
 	{
 		return (0);
 	}
-	while (s[i] != '\0')
-	{
-		copy[i] = s[i];
-		i++;
-	}
-	copy[i] = '\0';
+	ft_memcpy(copy, s, (len + 1));
 	return (copy);
 }
