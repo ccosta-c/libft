@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:37:00 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/09 18:20:22 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/20 12:11:44 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*original;
 	int			i;
 
-	original = s;
 	i = ft_strlen(s);
 	s = (s + i);
-	while (*s != *original && *s != c)
+	while (*s && *s != c)
 	{
 		s--;
 	}
