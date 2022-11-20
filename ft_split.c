@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 14:36:31 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/19 17:38:07 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/19 17:56:56 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static	int	c_words(const char *s, char c)
 	return (words);
 }
 
-char	*w_words(const char *s, char c)
+static char	*w_words(const char *s, char c)
 {
 	int		i;
 	int		len;
