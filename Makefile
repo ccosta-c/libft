@@ -6,7 +6,7 @@
 #    By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 13:40:24 by ccosta-c          #+#    #+#              #
-#    Updated: 2022/11/20 11:38:56 by ccosta-c         ###   ########.fr        #
+#    Updated: 2022/11/20 11:45:13 by ccosta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,12 +42,24 @@ clean:
 	rm -f $(OBJS) $(BOBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) a.out
+#remove a.out before delivering
 	
 re: fclean all
 
-so:
-	$(COMPILER) -fPIC $(FLAGS) -c $(SRC)
-	$(COMPILER) -shared -o libft.so $(OBJS) $(BOBJS)
+run: fclean all
+	$(COMPILER) $(FLAGS) -static main.c libft.a -lbsd
+	./a.out
+#delete run before delivering
 
-.PHONY: all bonus clean fclean re so
+runbonus: fclean bonus
+	$(COMPILER) $(FLAGS) -static main.c libft.a -lbsd
+	./a.out
+#delete runbonus before delivering
+	
+so:
+	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJS) $(BOBJS)
+#delete so before delivering
+
+.PHONY: all bonus clean fclean re run runbonus so
