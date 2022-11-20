@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 13:27:44 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/19 16:06:52 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/20 11:59:53 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (fd < 0)
+		return ;
 	if (s != NULL)
 	{
 		write(fd, s, ft_strlen(s));
