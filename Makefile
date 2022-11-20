@@ -6,7 +6,7 @@
 #    By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 13:40:24 by ccosta-c          #+#    #+#              #
-#    Updated: 2022/11/19 17:35:35 by ccosta-c         ###   ########.fr        #
+#    Updated: 2022/11/20 11:38:56 by ccosta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,4 +46,8 @@ fclean: clean
 	
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+so:
+	$(COMPILER) -fPIC $(FLAGS) -c $(SRC)
+	$(COMPILER) -shared -o libft.so $(OBJS) $(BOBJS)
+
+.PHONY: all bonus clean fclean re so
