@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 15:03:59 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/19 16:12:27 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/11/20 12:22:07 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	while (current != NULL)
 	{
 		next = current->next;
-		(del)(current->content);
-		free(current);
+		ft_lstdelone(current, del);
 		current = next;
 	}
 	*lst = NULL;
