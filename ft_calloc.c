@@ -6,7 +6,7 @@
 /*   By: ccosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 14:39:19 by ccosta-c          #+#    #+#             */
-/*   Updated: 2022/11/19 16:12:37 by ccosta-c         ###   ########.fr       */
+/*   Updated: 2022/12/15 11:39:35 by ccosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void	*ptr;
+	char	*ptr;
+	int		x;
 
-	ptr = malloc(size * nmemb);
-	if (ptr == NULL)
-	{
-		return (ptr);
-	}
-	ft_bzero(ptr, (size * nmemb));
-	return (ptr);
+	x = nmemb * size;
+	ptr = malloc(x);
+	if (!ptr)
+		return (NULL);
+	while (--x >= 0)
+		*(ptr + x) = '\0';
+	return ((void *)ptr);
 }
